@@ -20,4 +20,4 @@ function [err]=knn(X,xl,Y,yl,KNN)
     err=nt-sum(cerr(:)==0);
 
     err=(err*100.0)/nt;
-end
+endfunction
