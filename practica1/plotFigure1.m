@@ -1,0 +1,2 @@
+function plotFigure1()  load trdata.mat.gz;  load trlabels.mat.gz;  load tedata.mat.gz;  load telabels.mat.gz;    [m, W] = pca(X);  errors = [];  i = [10:10:100];  erro1 = knn(X, xl, Y, yl, 1);  Y = Y - m;  X = X - m;  for j = 10:10:100    Y1 = W(:,1:j)'*Y;    X1 = W(:,1:j)'*X;    err = knn(X1, xl, Y1, yl, 1);    errors = [errors; err];  end  figure   hold on  plot(i, erro1)  plot(i, errors)
+endfunction
