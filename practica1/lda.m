@@ -3,7 +3,6 @@ function [W]=lda(X, xl)
 
   Sb = 0;
   Sw = 0;
-  Cov = 0;
 
   for c = unique(xl)  
     ic = find (xl == c);
