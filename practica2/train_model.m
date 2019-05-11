@@ -21,3 +21,6 @@ ham = tr(hamIndex, 1:(end - 1));
 
 spamAPriori = size(spam(:,1))(1,1) / size(tr(:,1))(1,1);
 hamAPriori = size(ham(:,1))(1,1) / size(tr(:,1))(1,1);
+
+hamCondProb = sum(ham)/sum(sum(ham'));
+spamCondProb = sum(spam)/sum(sum(spam'));
