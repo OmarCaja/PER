@@ -1,1 +1,1 @@
-function [te, tr] = shuffle(data, partition)  [nrows, ncols] = size(data);  rand("seed", 23);  perm = randperm(nrows);  pdata = data(perm, :);    ntr = floor(nrows*partition);  nte = nrows - ntr;  te = pdata((ntr + 1):nrows,:);  tr = pdata(1:ntr, :);endfunction
+function [te, tr] = shuffle(data, partition, seed)  [nrows, ncols] = size(data);  rand("seed", seed);  perm = randperm(nrows);  pdata = data(perm, :);    ntr = floor(nrows*partition);  nte = nrows - ntr;  te = pdata((ntr + 1):nrows,:);  tr = pdata(1:ntr, :);endfunction
